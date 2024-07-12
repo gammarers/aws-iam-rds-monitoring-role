@@ -8,7 +8,7 @@ import { Construct } from 'constructs';
  * type omitKeys = 'eventPattern';
  * export interface IamRDSMonitoringRoleProps extends Omit<iam.RoleProps, 'managedPolicies'> {}
  */
-interface IamRDSMonitoringRoleProps {
+export interface IamRDSMonitoringRoleProps {
   readonly roleName?: string;
   readonly managedPolicies?: iam.IManagedPolicy[];
   readonly permissionsBoundary?: iam.IManagedPolicy;
@@ -19,13 +19,6 @@ interface IamRDSMonitoringRoleProps {
   readonly path?: string;
   readonly description?: string;
 }
-
-/**
- * @TODO: Not yet supported Omit
- * https://github.com/aws/jsii/issues/4468
- * type omitKeys = 'eventPattern';
- * export interface IamRDSMonitoringRoleProps extends Omit<iam.RoleProps, 'eventPattern'> {}
- */
 
 export class IamRDSMonitoringRole extends iam.Role {
   constructor(scope: Construct, id: string, props?: IamRDSMonitoringRoleProps) {
