@@ -10,8 +10,8 @@ const project = new awscdk.AwsCdkConstructLibrary({
   name: '@gammarers/aws-iam-rds-monitoring-role',
   projenrcTs: true,
   repositoryUrl: 'https://github.com/gammarers/aws-iam-rds-monitoring-role.git',
-  releaseToNpm: false, // temp
-  //npmAccess: javascript.NpmAccess.PUBLIC,
+  releaseToNpm: true,
+  npmAccess: javascript.NpmAccess.PUBLIC,
   depsUpgrade: true,
   depsUpgradeOptions: {
     workflowOptions: {
