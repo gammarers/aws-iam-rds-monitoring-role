@@ -23,6 +23,7 @@ describe('IamRDSMonitoringRole default Testing', () => {
 
   it('Should match iam role.', async () => {
     template.hasResourceProperties('AWS::IAM::Role', Match.objectEquals({
+      Description: 'rds monitoring role',
       AssumeRolePolicyDocument: Match.objectEquals({
         Version: '2012-10-17',
         Statement: [
