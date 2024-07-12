@@ -24,6 +24,7 @@ exports[`IamRDSMonitoringRole default Testing Should match snapshot. 1`] = `
           ],
           "Version": "2012-10-17",
         },
+        "Description": "rds monitoring role",
         "ManagedPolicyArns": [
           "arn:aws:iam::aws:policy/service-role/AmazonRDSEnhancedMonitoringRole",
         ],
