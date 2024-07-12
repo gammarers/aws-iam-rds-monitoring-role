@@ -638,30 +638,13 @@ const iamRDSMonitoringRoleProps: IamRDSMonitoringRoleProps = { ... }
 
 | **Name** | **Type** | **Description** |
 | --- | --- | --- |
-| <code><a href="#@gammarers/aws-iam-rds-monitoring-role.IamRDSMonitoringRoleProps.property.assumedBy">assumedBy</a></code> | <code>aws-cdk-lib.aws_iam.IPrincipal</code> | The IAM principal (i.e. `new ServicePrincipal('sns.amazonaws.com')`) which can assume this role. |
-| <code><a href="#@gammarers/aws-iam-rds-monitoring-role.IamRDSMonitoringRoleProps.property.description">description</a></code> | <code>string</code> | A description of the role. |
-| <code><a href="#@gammarers/aws-iam-rds-monitoring-role.IamRDSMonitoringRoleProps.property.externalIds">externalIds</a></code> | <code>string[]</code> | List of IDs that the role assumer needs to provide one of when assuming this role. |
-| <code><a href="#@gammarers/aws-iam-rds-monitoring-role.IamRDSMonitoringRoleProps.property.inlinePolicies">inlinePolicies</a></code> | <code>{[ key: string ]: aws-cdk-lib.aws_iam.PolicyDocument}</code> | A list of named policies to inline into this role. |
-| <code><a href="#@gammarers/aws-iam-rds-monitoring-role.IamRDSMonitoringRoleProps.property.managedPolicies">managedPolicies</a></code> | <code>aws-cdk-lib.aws_iam.IManagedPolicy[]</code> | A list of managed policies associated with this role. |
-| <code><a href="#@gammarers/aws-iam-rds-monitoring-role.IamRDSMonitoringRoleProps.property.maxSessionDuration">maxSessionDuration</a></code> | <code>aws-cdk-lib.Duration</code> | The maximum session duration that you want to set for the specified role. |
-| <code><a href="#@gammarers/aws-iam-rds-monitoring-role.IamRDSMonitoringRoleProps.property.path">path</a></code> | <code>string</code> | The path associated with this role. |
-| <code><a href="#@gammarers/aws-iam-rds-monitoring-role.IamRDSMonitoringRoleProps.property.permissionsBoundary">permissionsBoundary</a></code> | <code>aws-cdk-lib.aws_iam.IManagedPolicy</code> | AWS supports permissions boundaries for IAM entities (users or roles). |
-| <code><a href="#@gammarers/aws-iam-rds-monitoring-role.IamRDSMonitoringRoleProps.property.roleName">roleName</a></code> | <code>string</code> | A name for the IAM role. |
-
----
-
-##### `assumedBy`<sup>Required</sup> <a name="assumedBy" id="@gammarers/aws-iam-rds-monitoring-role.IamRDSMonitoringRoleProps.property.assumedBy"></a>
-
-```typescript
-public readonly assumedBy: IPrincipal;
-```
-
-- *Type:* aws-cdk-lib.aws_iam.IPrincipal
-
-The IAM principal (i.e. `new ServicePrincipal('sns.amazonaws.com')`) which can assume this role.
-
-You can later modify the assume role policy document by accessing it via
-the `assumeRolePolicy` property.
+| <code><a href="#@gammarers/aws-iam-rds-monitoring-role.IamRDSMonitoringRoleProps.property.description">description</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@gammarers/aws-iam-rds-monitoring-role.IamRDSMonitoringRoleProps.property.inlinePolicies">inlinePolicies</a></code> | <code>{[ key: string ]: aws-cdk-lib.aws_iam.PolicyDocument}</code> | *No description.* |
+| <code><a href="#@gammarers/aws-iam-rds-monitoring-role.IamRDSMonitoringRoleProps.property.managedPolicies">managedPolicies</a></code> | <code>aws-cdk-lib.aws_iam.IManagedPolicy[]</code> | *No description.* |
+| <code><a href="#@gammarers/aws-iam-rds-monitoring-role.IamRDSMonitoringRoleProps.property.maxSessionDuration">maxSessionDuration</a></code> | <code>aws-cdk-lib.Duration</code> | *No description.* |
+| <code><a href="#@gammarers/aws-iam-rds-monitoring-role.IamRDSMonitoringRoleProps.property.path">path</a></code> | <code>string</code> | *No description.* |
+| <code><a href="#@gammarers/aws-iam-rds-monitoring-role.IamRDSMonitoringRoleProps.property.permissionsBoundary">permissionsBoundary</a></code> | <code>aws-cdk-lib.aws_iam.IManagedPolicy</code> | *No description.* |
+| <code><a href="#@gammarers/aws-iam-rds-monitoring-role.IamRDSMonitoringRoleProps.property.roleName">roleName</a></code> | <code>string</code> | *No description.* |
 
 ---
 
@@ -672,27 +655,6 @@ public readonly description: string;
 ```
 
 - *Type:* string
-- *Default:* No description.
-
-A description of the role.
-
-It can be up to 1000 characters long.
-
----
-
-##### `externalIds`<sup>Optional</sup> <a name="externalIds" id="@gammarers/aws-iam-rds-monitoring-role.IamRDSMonitoringRoleProps.property.externalIds"></a>
-
-```typescript
-public readonly externalIds: string[];
-```
-
-- *Type:* string[]
-- *Default:* No external ID required
-
-List of IDs that the role assumer needs to provide one of when assuming this role.
-
-If the configured and provided external IDs do not match, the
-AssumeRole operation will fail.
 
 ---
 
@@ -703,14 +665,6 @@ public readonly inlinePolicies: {[ key: string ]: PolicyDocument};
 ```
 
 - *Type:* {[ key: string ]: aws-cdk-lib.aws_iam.PolicyDocument}
-- *Default:* No policy is inlined in the Role resource.
-
-A list of named policies to inline into this role.
-
-These policies will be
-created with the role, whereas those added by ``addToPolicy`` are added
-using a separate CloudFormation resource (allowing a way around circular
-dependencies that could otherwise be introduced).
 
 ---
 
@@ -721,12 +675,6 @@ public readonly managedPolicies: IManagedPolicy[];
 ```
 
 - *Type:* aws-cdk-lib.aws_iam.IManagedPolicy[]
-- *Default:* No managed policies.
-
-A list of managed policies associated with this role.
-
-You can add managed policies later using
-`addManagedPolicy(ManagedPolicy.fromAwsManagedPolicyName(policyName))`.
 
 ---
 
@@ -737,24 +685,6 @@ public readonly maxSessionDuration: Duration;
 ```
 
 - *Type:* aws-cdk-lib.Duration
-- *Default:* Duration.hours(1)
-
-The maximum session duration that you want to set for the specified role.
-
-This setting can have a value from 1 hour (3600sec) to 12 (43200sec) hours.
-
-Anyone who assumes the role from the AWS CLI or API can use the
-DurationSeconds API parameter or the duration-seconds CLI parameter to
-request a longer session. The MaxSessionDuration setting determines the
-maximum duration that can be requested using the DurationSeconds
-parameter.
-
-If users don't specify a value for the DurationSeconds parameter, their
-security credentials are valid for one hour by default. This applies when
-you use the AssumeRole* API operations or the assume-role* CLI operations
-but does not apply when you use those operations to create a console URL.
-
-> [https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use.html](https://docs.aws.amazon.com/IAM/latest/UserGuide/id_roles_use.html)
 
 ---
 
@@ -765,12 +695,6 @@ public readonly path: string;
 ```
 
 - *Type:* string
-- *Default:* /
-
-The path associated with this role.
-
-For information about IAM paths, see
-Friendly Names and Paths in IAM User Guide.
 
 ---
 
@@ -781,17 +705,6 @@ public readonly permissionsBoundary: IManagedPolicy;
 ```
 
 - *Type:* aws-cdk-lib.aws_iam.IManagedPolicy
-- *Default:* No permissions boundary.
-
-AWS supports permissions boundaries for IAM entities (users or roles).
-
-A permissions boundary is an advanced feature for using a managed policy
-to set the maximum permissions that an identity-based policy can grant to
-an IAM entity. An entity's permissions boundary allows it to perform only
-the actions that are allowed by both its identity-based policies and its
-permissions boundaries.
-
-> [https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html](https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies_boundaries.html)
 
 ---
 
@@ -802,20 +715,6 @@ public readonly roleName: string;
 ```
 
 - *Type:* string
-- *Default:* AWS CloudFormation generates a unique physical ID and uses that ID for the role name.
-
-A name for the IAM role.
-
-For valid values, see the RoleName parameter for
-the CreateRole action in the IAM API Reference.
-
-IMPORTANT: If you specify a name, you cannot perform updates that require
-replacement of this resource. You can perform updates that require no or
-some interruption. If you must replace the resource, specify a new name.
-
-If you specify a name, you must specify the CAPABILITY_NAMED_IAM value to
-acknowledge your template's capabilities. For more information, see
-Acknowledging IAM Resources in AWS CloudFormation Templates.
 
 ---
 
