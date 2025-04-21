@@ -17,7 +17,7 @@ const project = new awscdk.AwsCdkConstructLibrary({
   depsUpgradeOptions: {
     workflowOptions: {
       labels: ['auto-approve', 'auto-merge'],
-      schedule: javascript.UpgradeDependenciesSchedule.expressions(['9 16 * * 3']), // everyday
+      schedule: javascript.UpgradeDependenciesSchedule.expressions(['9 16 8 * +']), // everyday
     },
   },
   minNodeVersion: '18.0.0',
